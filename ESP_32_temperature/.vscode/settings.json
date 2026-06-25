@@ -1,0 +1,13 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.extensionActivationMode": "always",
+  "clangd.path": "/home/brak3r/.espressif/tools/esp-clang/esp-20.1.1_20250829/esp-clang/bin/clangd",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=**",
+    "--compile-commands-dir=/home/brak3r/Desktop/ESP32_projects/ESP_32_temperature/build"
+  ],
+  "idf.currentSetup": "/home/brak3r/.espressif/v6.0.1/esp-idf",
+  "idf.flashType": "UART",
+  "idf.port": "/dev/ttyUSB0"
+}
