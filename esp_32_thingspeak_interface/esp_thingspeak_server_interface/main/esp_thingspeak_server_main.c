@@ -21,7 +21,7 @@
 #include "esp_http_client.h"
 
 esp_err_t temperature_humidity_task(float* temperature, float* humidity);
-esp_err_t thingspeak_send(float global_temperature,float local_temperature,float global_humidity,float local_humidity,int temp_difference);
+esp_err_t thingspeak_send(float global_temperature,float local_temperature,float global_humidity,float local_humidity,float temp_difference);
 
 #define WIFI_SSID      "BrAk3R's_N3T_2_4"
 #define WIFI_PASS      "123guest@bhatt2"
@@ -234,7 +234,7 @@ void app_main(void)
         printf("global Temp = %.2f\n", temp_celsius);
         double humidity_value = humidity->valuedouble;
         printf("global Humidity = %.2f\n", humidity_value);
-        int temp_difference = (int)(temp_celsius - temperature);
+        float temp_difference = (float)(temp_celsius - temperature);
         thingspeak_send(temp_celsius, temperature, humidity_value, humidity1,temp_difference);          // temperature from openweathermap and temperature from dht11 sensor
         cJSON_Delete(root); 
     vTaskDelay(pdMS_TO_TICKS(30000));
@@ -268,13 +268,13 @@ esp_err_t temperature_humidity_task(float* temperature, float* humidity)
     return res;
 }
 
-esp_err_t thingspeak_send(float global_temperature,float local_temperature,float global_humidity,float local_humidity,int temp_difference)
+esp_err_t thingspeak_send(float global_temperature,float local_temperature,float global_humidity,float local_humidity,float temp_difference)
 {
     char url[256];
 
     snprintf(url,
              sizeof(url),
-             "https://api.thingspeak.com/update?api_key=%s&field1=%.2f&field2=%.2f&field3=%.2f&field4=%.2f&field5=%d",
+             "https://api.thingspeak.com/update?api_key=%s&field1=%.2f&field2=%.2f&field3=%.2f&field4=%.2f&field5=%.2f",
              THINGSPEAK_API_KEY,
              global_temperature,
              local_temperature,
