@@ -18,7 +18,7 @@
 #define WIFI_PASS      "braker@123"
 
 #define WEATHER_URL \
-"http://api.openweathermap.org/data/2.5/weather?q=Mumbai,Maharashtra,IN&APPID=ed3d757c7d232b52e1a0b1bd5df8a30b"
+"http://api.openweathermap.org/data/2.5/weather?q=Mumbai,Maharashtra,IN&APPID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 static const char *TAG = "WEATHER";
 

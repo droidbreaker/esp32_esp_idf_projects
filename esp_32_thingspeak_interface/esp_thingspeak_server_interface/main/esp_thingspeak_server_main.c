@@ -24,14 +24,14 @@ esp_err_t temperature_humidity_task(float* temperature, float* humidity);
 esp_err_t thingspeak_send(float global_temperature,float local_temperature,float global_humidity,float local_humidity,float temp_difference);
 
 #define WIFI_SSID      "BrAk3R's_N3T_2_4"
-#define WIFI_PASS      "123guest@bhatt2"
+#define WIFI_PASS      "xxxxxxxxxxxxxxxx"
 
 #define DHT_GPIO GPIO_NUM_5
 
-#define THINGSPEAK_API_KEY "FRSD2TJVHVZK8U5W"
+#define THINGSPEAK_API_KEY "xxxxxxxxxxxxxxxx"
 
 #define WEATHER_URL \
-"http://api.openweathermap.org/data/2.5/weather?q=Mumbai,Maharashtra,IN&APPID=ed3d757c7d232b52e1a0b1bd5df8a30b"
+"http://api.openweathermap.org/data/2.5/weather?q=Mumbai,Maharashtra,IN&APPID=xxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 static const char *TAG = "WEATHER";
 
