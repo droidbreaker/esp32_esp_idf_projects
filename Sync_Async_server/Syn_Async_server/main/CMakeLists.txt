@@ -1,5 +1,5 @@
 idf_component_register(
-    SRCS "Sync_Async_main.c"
+    SRCS "Sync_Async_LED_control_main.c"
     INCLUDE_DIRS "."
     REQUIRES
         esp_wifi
